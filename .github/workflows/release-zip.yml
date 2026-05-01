@@ -12,13 +12,13 @@ jobs:
 
       - name: Create zip
         run: |
-          zip -r project.zip ./*
+          zip -r kk_hitw.zip ./*
       
       - name: Create / update release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
           name: latest
-          files: project.zip
+          files: kk_hitw.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
